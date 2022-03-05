@@ -1,0 +1,79 @@
+:root {
+    --black : #130f0d;
+    --primary : hsl(32, 98%, 56%);
+    --white : #f0f0f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, button, input {
+    font-family: 'Roboto' , sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    background-color: hsl(32, 98%, 5%);
+    
+    padding: 16px;
+}
+
+#paginate {
+    width: 100%;
+    margin: 32px auto;
+}
+
+#paginate .list .item {
+    border-bottom: 1px solid hsl(32, 98%, 12%);
+    padding: 10px 32px;
+}
+
+#paginate .list .item:hover {
+    background-color: rgba(255,255,255,0.04);
+}
+
+#paginate .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0.5rem 0 0 0;
+}
+
+#paginate .pagination div{
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.8rem;
+
+    border: 1px solid var(--black);
+}
+
+#paginate .pagination div:not(.numbers),
+#paginate .pagination div.numbers div {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+#paginate .pagination div.numbers div:hover,
+#paginate .pagination div.numbers div.active {
+    color : var(--primary);
+}
+
+#paginate .pagination div:hover {
+    border: 1px solid rgba(255,255,255,0.2);
+}
